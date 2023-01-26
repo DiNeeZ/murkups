@@ -1,0 +1,21 @@
+// base
+$font-family: "Roboto", sans-serif;
+$content-width: 1180px;
+$container-offset: 20px;
+$container-width: calc($content-width + ($container-offset * 2));
+
+// colors
+$light-color: #fff;
+$accent-color: #ef2a82;
+$main-text-color: #172755;
+$secondary-text-color: #8794ba;
+$dark-blue-color: #172755;
+$bg-color: #f8f9ff;
+
+//breackpoints
+$bp-xs: 320px;
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1280px;
+$bp-2xl: 1536px;

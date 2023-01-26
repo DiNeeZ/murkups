@@ -1,0 +1,115 @@
+.hero {
+  position: relative;
+  background-image: url("../img/bg-gradient.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-top: 21.6rem;
+  z-index: 10;
+
+  &::before {
+    content: url("../img/circle-1.svg");
+    position: absolute;
+    transform: rotate(15deg);
+    left: 16.5%;
+    bottom: 49rem;
+    z-index: -1;
+  }
+
+  &::after {
+    content: url("../img/circle-2.svg");
+    position: absolute;
+    right: 17.5%;
+    bottom: 56.5rem;
+    z-index: -1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 85rem;
+    margin: 0 auto;
+    margin-bottom: 9.78rem;
+    color: $light-color;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 4rem 0;
+    font-weight: 800;
+    font-size: 7.2rem;
+    line-height: 8rem;
+    letter-spacing: -0.03em;
+    text-transform: capitalize;
+  }
+
+  &__subtitle {
+    margin: 0 0 4rem 0;
+    max-width: 58rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: -0.02em;
+    opacity: 0.8;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 17rem;
+  }
+
+  &__image {
+    max-width: 110.986rem;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10rem;
+  }
+}
+
+.form {
+  width: 71.452%;
+  &__control {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem 0.9rem;
+    color: $text-gray;
+    background-color: $light-color;
+    border-radius: 7.1rem;
+  }
+
+  &__input {
+    flex-grow: 1;
+    background: none;
+    border: none;
+    outline: none;
+    &::placeholder {
+      color: $text-gray;
+    }
+  }
+
+  &__icon {
+    width: 2.239rem;
+    height: 1.561rem;
+    margin-left: 2.2rem;
+    margin-right: 2.5rem;
+    fill: currentColor;
+  }
+
+  &__btn {
+    padding: 1.6rem 3rem;
+    color: $light-color;
+    border-radius: 7.1rem;
+    background: linear-gradient(106.75deg, #2272ff 0%, #0d03c3 100%);
+    transition: opacity 0.15s linear;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

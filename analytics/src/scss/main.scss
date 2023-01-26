@@ -1,0 +1,18 @@
+// basic
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+//common components
+
+@import "./components/button";
+@import "./components/logo";
+
+// page components
+@import "./components/header";
+@import "./components/hero";
+@import "./components/features";
+@import "./components/benefits";
+@import "./components/pricing";
+@import "./components/footer";

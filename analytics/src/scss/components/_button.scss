@@ -1,0 +1,26 @@
+.btn {
+  color: $secondary-text-color;
+  transition: color 0.15s linear;
+
+  &:hover {
+    color: $light-color;
+  }
+
+  &--rounded {
+    padding: 1.05rem 5.3rem;
+    border: 1px solid rgba($secondary-text-color, 0.7);
+    border-radius: 2rem;
+    transition: border 0.15s linear;
+
+    &:hover {
+      border: 1px solid rgba($light-color, 0.7);
+    }
+  }
+
+  &--accent {
+    padding: 1.55rem 8rem;
+    color: $light-color;
+    border-radius: 2.5rem;
+    background-color: $accent-color;
+  }
+}

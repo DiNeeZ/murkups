@@ -1,0 +1,57 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.263rem;
+
+  svg {
+    &:first-child {
+      width: 4rem;
+      height: 4rem;
+      fill: $accent-color;
+    }
+
+    &:last-child {
+      width: 11.745rem;
+      height: 1.62rem;
+      fill: $light-color;
+    }
+  }
+
+  &--bottom {
+    gap: 0.948rem;
+
+    svg {
+      // fill: currentColor;
+
+      &:first-child {
+        width: 3rem;
+        height: 3rem;
+        fill: $secondary-text-color;
+      }
+
+      &:last-child {
+        width: 8.808rem;
+        height: 1.215rem;
+        fill: $secondary-text-color;
+      }
+    }
+  }
+}
+
+@include small-tablet {
+  .logo {
+    gap: 0.948rem;
+
+    svg {
+      &:first-child {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      &:last-child {
+        width: 8.808rem;
+        height: 1.215rem;
+      }
+    }
+  }
+}

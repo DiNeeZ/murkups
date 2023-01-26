@@ -1,0 +1,33 @@
+.contact {
+  padding-top: 4.772rem;
+  padding-bottom: 8.812rem;
+  background-color: $dark-blue-color;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 93.4rem;
+    margin: 0 0 6.772rem 0;
+    font-weight: 800;
+    font-size: 6rem;
+    line-height: 6.7rem;
+    color: $light-color;
+    text-align: center;
+  }
+
+  &__btn {
+    padding: 1.4rem 5.95rem;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    letter-spacing: -0.02em;
+    color: $blue-color;
+    background-color: $light-color;
+    border-radius: 50rem;
+  }
+}

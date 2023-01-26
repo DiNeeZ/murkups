@@ -1,0 +1,93 @@
+.benefits {
+  margin-bottom: 11.4rem;
+}
+
+.benefit {
+  display: flex;
+  gap: 3rem;
+
+  &:not(:last-child) {
+    margin-bottom: 11.5rem;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__title {
+    margin: 0 0 3rem 0;
+
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 4.7rem;
+  }
+
+  &__descr {
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+  &__image {
+    flex: 1 0 50.85%;
+
+    .image {
+      box-shadow: 0px 18px 50px -15px rgba(25, 42, 89, 0.2);
+      border-radius: 3rem;
+    }
+  }
+}
+
+@include for-desktop {
+  .benefit {
+    gap: 10rem;
+    &__title {
+      padding-top: 8.9rem;
+    }
+  }
+}
+
+@include tablet {
+  .benefit {
+    &__title {
+      font-size: 3.5rem;
+      line-height: 4.1rem;
+    }
+
+    &__descr {
+      font-size: 1.6rem;
+      line-height: 2.31rem;
+    }
+  }
+}
+
+@include small-tablet {
+  .benefit {
+    &__title {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+
+    &__descr {
+      font-size: 1.4rem;
+      line-height: 1.96rem;
+    }
+  }
+}
+
+@include mobile {
+  .benefits {
+    margin-bottom: -2rem;
+  }
+
+  .benefit {
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: 2rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+}

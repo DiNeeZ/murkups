@@ -1,0 +1,165 @@
+.pricing {
+  padding-bottom: 10rem;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 130%;
+    margin-top: 10rem;
+    background-color: $dark-blue-color;
+    border-top: 1.7rem solid $accent-color;
+    transform: skewY(-7.5deg);
+    z-index: -1;
+  }
+
+  &__bg-decor {
+    position: absolute;
+    width: 105.623%;
+    height: 151.768%;
+    bottom: -89rem;
+    right: -85.5rem;
+    transform: skewY(7.5deg);
+
+    svg {
+      fill: rgba($secondary-text-color, 0.07);
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__container {
+    padding-top: 26.7rem;
+  }
+
+  &__title {
+    margin: 0 0 3.8rem 0;
+    font-size: 4rem;
+    line-height: 4.688rem;
+    color: $light-color;
+    text-align: center;
+  }
+
+  &__subtitle {
+    max-width: 65rem;
+    margin: 0 auto 7.7rem;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: $secondary-text-color;
+  }
+}
+
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: $light-color;
+  background: rgba(#0f1f4b, 0.7);
+
+  box-shadow: 0px 1.8rem 5rem -1.5rem rgba(25, 42, 89, 0.2);
+  border-radius: 3rem;
+  padding: 5rem 0 7rem;
+  transition: background-color 0.3s ease-in-out;
+
+  &__top {
+    padding: 0 4.8rem;
+    margin-bottom: 2.8rem;
+    border-bottom: 1px solid $secondary-text-color;
+  }
+
+  &__title {
+    margin: 0 0 1rem 0;
+    font-size: 3rem;
+    line-height: 3.615rem;
+  }
+
+  &__subtitle {
+    margin: 0 0 3.5rem 0;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    color: $secondary-text-color;
+  }
+
+  &__body {
+    margin-bottom: 4.2rem;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 6rem;
+    line-height: 7.031rem;
+  }
+
+  &__sign {
+    font-size: 3rem;
+    line-height: 3.516rem;
+  }
+
+  &__rate {
+    color: $secondary-text-color;
+  }
+
+  .btn {
+    padding: 1.55rem 8rem;
+    border-radius: 2.5rem;
+  }
+}
+
+.active {
+  &.plan {
+    background-color: $light-color;
+  }
+
+  .plan {
+    &__title,
+    &__body {
+      color: $dark-blue-color;
+    }
+  }
+
+  .btn {
+    border: none;
+    color: $light-color;
+    background-color: $accent-color;
+    transition: background-color 0.15s linear;
+
+    &:hover {
+      background-color: rgba($accent-color, 0.9);
+    }
+  }
+}
+
+@include small-tablet {
+  .pricing {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+
+    &__bg-decor {
+      display: none;
+    }
+  }
+
+  .plan {
+    margin: 0 1rem;
+    max-width: 28rem;
+  }
+
+  .swiper-overflow-container {
+    overflow-x: hidden; /* prevent horizontal scroll */
+  }
+
+  .swiper-overflow-container .container {
+    overflow: visible; /* if your container has overflow by default */
+  }
+
+  .swiper-overflow-container .swiper-container {
+    overflow: visible; /* remove swiper container overflow */
+  }
+}

@@ -1,0 +1,112 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5rem 0;
+  z-index: 10;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .menu--active {
+    display: block;
+    background-color: $dark-blue-color;
+    animation: anim 0.5s;
+
+    .nav-list {
+      font-size: 3rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: 3.6rem;
+  color: $secondary-text-color;
+
+  &__link {
+    color: inherit;
+    transition: color 0.15s linear;
+
+    &:hover {
+      color: $light-color;
+    }
+  }
+}
+
+.burger {
+  @include burger;
+  display: none;
+  z-index: 20;
+}
+
+@include mobile {
+  .header {
+    box-shadow: 0px 4px 4px #12214d;
+    &__nav {
+      position: absolute;
+      display: none;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@include small-tablet {
+  .header {
+    padding: 2rem 0;
+    &__btns {
+      .btn--rounded {
+        display: none;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .header {
+    &__btns {
+      gap: 2rem;
+    }
+  }
+
+  .nav-list {
+    gap: 1.8rem;
+  }
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
