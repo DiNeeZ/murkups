@@ -1,0 +1,34 @@
+.header {
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__left-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.48rem;
+  }
+
+  &__icon {
+    width: 2.02rem;
+    height: 2.1rem;
+    fill: $primary-color;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 6.1rem;
+  }
+}
