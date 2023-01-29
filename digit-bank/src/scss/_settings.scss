@@ -24,6 +24,7 @@ html {
   min-height: 100%;
   font-size: 1.7rem;
   line-height: 2.8rem;
+  font-weight: 500;
   color: $text-color;
 }
 
@@ -35,7 +36,15 @@ img {
 
 a {
   text-decoration: none;
-  color: inherit;
+}
+
+.link {
+  color: $text-color;
+  transition: color .15s linear;
+
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 .site-container {
