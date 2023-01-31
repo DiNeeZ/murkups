@@ -1,0 +1,234 @@
+.services {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  background: radial-gradient(
+      50% 100% at top left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    #f2f2f2;
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    text-align: center;
+    background-image: url("../img/services-bg.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &::before {
+      content: url("../img/credit-card.png");
+      position: absolute;
+      top: 11rem;
+      left: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  &__item {
+    border-radius: 0.5rem;
+
+    &--video {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1rem solid $light-color;
+
+      img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  &__item-btn {
+    position: relative;
+    width: 7.5rem;
+    height: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $light-color;
+    border-radius: 50%;
+    z-index: 10;
+
+    svg {
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: $primary-color;
+    }
+  }
+
+  &__more {
+    display: flex;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+    line-height: 2.2rem;
+    color: $heading-color;
+  }
+
+  &__link {
+    position: relative;
+    color: $primary-color;
+    transition: color 0.3s ease-in-out;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(150%, -50%);
+      width: 2rem;
+      height: 2rem;
+      fill: currentColor;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: rgba($primary-color, 0.8);
+
+      svg {
+        transform: translate(175%, -50%);
+      }
+    }
+  }
+}
+
+.service-card {
+  position: relative;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  text-align: left;
+  background: rgba($light-color, 0.25);
+  box-shadow: 0px 1rem 2.5rem rgba($dark-color, 0.05);
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
+
+  &__icon {
+    fill: $primary-color;
+    &--card {
+      width: 5.1rem;
+      height: 4.5rem;
+    }
+
+    &--chart {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+  &__title {
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.8rem;
+    color: $heading-color;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__btn {
+    z-index: 1;
+    transition: background 0.3s ease-in-out;
+    &::before {
+      z-index: -1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__decor-icon {
+    position: absolute;
+    bottom: 1.4rem;
+    right: 0.65rem;
+    width: 12rem;
+    height: 12rem;
+    padding: 2rem;
+    fill: $secondary-color;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      170deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+
+    .service-card {
+      &__icon {
+        fill: $light-color;
+      }
+
+      &__title {
+        color: $light-color;
+      }
+
+      &__subtitle {
+        color: $light-color;
+      }
+
+      &__btn {
+        color: $primary-color;
+        background: $light-color;
+
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      &__decor-icon {
+        fill: $light-color;
+      }
+    }
+  }
+}

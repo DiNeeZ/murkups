@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
+  @include('partials/head.html')
 
-@include('partials/head.html')
-
-<body class="page__body">
-  <div class="site-container">
-    @include('partials/header.html')
-    <main class="main">
-      @include('partials/hero.html')
-    </main>
-    @include('partials/footer.html')
-  </div>
-</body>
-
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <!-- hero -->
+        @include('partials/hero.html')
+        <!-- partners -->
+        @include('partials/partners.html')
+        <!-- start -->
+        @include('partials/start.html')
+        <!-- showcase -->
+        @include('partials/showcase.html')
+        <!-- services -->
+        @include('partials/services.html')
+        <!-- download apps -->
+        @include('partials/download-apps.html')
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
 </html>

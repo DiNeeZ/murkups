@@ -1,0 +1,96 @@
+.download-apps {
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      $heading-color 30%,
+      rgba($primary-color, 0.44) 100%
+    );
+    z-index: -1;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+  }
+
+  &__content {
+    max-width: 65.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__timer {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: $light-color;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 4.5rem;
+    line-height: 5.8rem;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__btn-group {
+    height: 4.7rem;
+    display: inline-flex;
+    gap: 2rem;
+  }
+
+  &__btn-image {
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+.timer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+
+  &__num {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 5.2rem;
+    color: $secondary-color;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    letter-spacing: 0.25em;
+    color: rgba($light-color, 0.8);
+    text-transform: uppercase;
+  }
+}

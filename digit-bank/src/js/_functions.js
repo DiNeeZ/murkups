@@ -42,11 +42,27 @@
 // });
 
 // Swiper slider
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
-// });
+import Swiper, { Navigation, Pagination } from "swiper";
+
+// Start slider
+Swiper.use([Navigation, Pagination]);
+const startSwiper = new Swiper(".start-slider", {
+  slidesPerView: "auto",
+  loop: true,
+  initialSlide: 1,
+  navigation: {
+    nextEl: ".start-slider__next",
+  },
+  pagination: {
+    el: ".start-slider__pagination",
+    // clickable: true,
+    bulletClass: "start-slider__bullet",
+    bulletActiveClass: "start-slider__bullet--active",
+    renderBullet: function (index) {
+      return `<div class="start-slider__bullet">0${index + 1}</div>`;
+    },
+  },
+});
 
 // Animations on scroll
 // import AOS from 'aos';
@@ -76,3 +92,6 @@
 // };
 
 // validateForms('.form-1', rules1, afterForm);
+
+// Timer
+import { time } from "./functions/timer";
