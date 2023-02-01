@@ -1,0 +1,62 @@
+.qna {
+  padding-bottom: 10rem;
+  background: radial-gradient(
+      50% 100% at top left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    );
+
+  &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+
+  &__left {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__badge {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.qna-badge {
+  padding: 3.6rem 19.8rem 3.6rem 3rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background: rgba($primary-color, 0.5);
+  box-shadow: 0px 1rem 2.5rem rgba($dark-color, 0.05);
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
+  color: $light-color;
+
+  &__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    fill: currentColor;
+  }
+
+  &__title {
+    margin: 0 0 0.5rem 0;
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  &__subtitle {
+    color: inherit;
+  }
+}

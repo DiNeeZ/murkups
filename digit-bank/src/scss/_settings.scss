@@ -65,6 +65,7 @@ a {
   border: none;
   overflow: hidden;
   cursor: pointer;
+  z-index: 0;
 
   &::before {
     content: "";
@@ -89,6 +90,10 @@ a {
     background: $light-color;
     box-shadow: 0px 1rem 2.5rem rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.15s linear;
+
+    &::before {
+      opacity: 0;
+    }
 
     &:hover {
       opacity: 1;
@@ -179,4 +184,8 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+.text {
+  font-weight: 400;
 }

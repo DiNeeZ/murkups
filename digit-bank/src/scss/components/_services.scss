@@ -179,7 +179,7 @@
     width: 12rem;
     height: 12rem;
     padding: 2rem;
-    fill: $secondary-color;
+    fill: rgba($secondary-color, 0.25);
   }
 
   &:after {
