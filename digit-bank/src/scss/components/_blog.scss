@@ -1,0 +1,141 @@
+.blog {
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  background: radial-gradient(
+      50% 100% at top left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    );
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/blog-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 4.6rem;
+    z-index: -1;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3.5rem;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    gap: 15rem;
+  }
+
+  &__text {
+    max-width: 44.3rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    margin-top: 1.8rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+.post-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $white-smoke;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &__image-wrapper {
+    position: relative;
+  }
+
+  &__image {
+    width: 100%;
+    height: 28rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 1.9rem;
+    left: 2.6rem;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    text-transform: uppercase;
+    color: $light-color;
+    background-color: $secondary-color;
+    border-radius: 0.5rem;
+  }
+
+  &__text {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 0 0 2rem 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.8rem;
+    display: flex;
+    align-items: center;
+    color: $heading-color;
+  }
+
+  &__descr {
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $primary-color;
+    transition: color 0.15s linear;
+
+    &:hover {
+      color: darken($primary-color, 10%);
+    }
+  }
+
+  &__footer {
+    padding: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    color: #adadad;
+    text-align: center;
+    border-top: 1px solid #dadada;
+  }
+}

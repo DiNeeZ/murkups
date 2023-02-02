@@ -4,6 +4,10 @@
 @import "fonts";
 @import "settings";
 
+//components
+@import "./components/accordion";
+@import "./components/testimonial";
+
 // page components
 @import "./components/header";
 @import "./components/hero";
@@ -15,3 +19,6 @@
 @import "./components/quote";
 @import "./components/reasons";
 @import "./components/qna";
+@import "./components/testimonials";
+@import "./components/blog";
+@import "./components/newslater";

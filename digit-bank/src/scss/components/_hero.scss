@@ -41,4 +41,36 @@
     display: flex;
     gap: 3rem;
   }
+
+  &__image-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: calc(100% - 10rem);
+      height: calc(100% - 10rem);
+      top: 2.5rem;
+      left: 8rem;
+      transform: rotate(345deg);
+      border-radius: 0.5rem;
+      background: rgba($light-color, 0.5);
+      border: 1px solid rgba($light-color, 0.25);
+      box-shadow: 0px 1rem 2.5rem rgba($dark-color, 0.05);
+      backdrop-filter: blur(0.5rem);
+    }
+  }
+
+  &__image {
+    transform: rotate(15deg);
+    width: 100%;
+    padding: 5rem;
+  }
 }

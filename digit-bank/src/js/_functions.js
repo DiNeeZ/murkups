@@ -42,10 +42,10 @@
 // });
 
 // Swiper slider
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
 
 // Start slider
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Autoplay]);
 const startSwiper = new Swiper(".start-slider", {
   slidesPerView: "auto",
   loop: true,
@@ -55,12 +55,27 @@ const startSwiper = new Swiper(".start-slider", {
   },
   pagination: {
     el: ".start-slider__pagination",
-    // clickable: true,
     bulletClass: "start-slider__bullet",
     bulletActiveClass: "start-slider__bullet--active",
     renderBullet: function (index) {
       return `<div class="start-slider__bullet">0${index + 1}</div>`;
     },
+  },
+});
+
+const testimonialsSwiper = new Swiper(".testimonials__slider", {
+  slidesPerView: 2,
+  slidesPerGroup: 2,
+  spaceBetween: 20,
+  speed: 500,
+  autoplay: {
+    delay: 5000,
+  },
+  loop: true,
+  pagination: {
+    el: ".testimonials__slider-pagination",
+    type: "bullets",
+    clickable: true,
   },
 });
 
@@ -93,5 +108,9 @@ const startSwiper = new Swiper(".start-slider", {
 
 // validateForms('.form-1', rules1, afterForm);
 
+import { card } from "../js/functions/card-rotate";
+
 // Timer
 import { time } from "./functions/timer";
+// Accordion
+import { accordion } from "./functions/accordion";

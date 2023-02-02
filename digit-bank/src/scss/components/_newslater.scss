@@ -1,0 +1,30 @@
+.newslater {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 3.5rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+}
+
+.newslater-form {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+
+  &__input {
+    width: 43.4rem;
+    border: none;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+}

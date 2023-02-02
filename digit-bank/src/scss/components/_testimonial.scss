@@ -1,0 +1,52 @@
+.testimonial {
+  background: rgba($light-color, 0.25);
+  border-radius: 0.5rem;
+
+  &__inner {
+    margin: 0;
+    padding: 3.5rem;
+  }
+
+  &__quote {
+    margin: 0 0 3rem 0;
+    padding-right: 1rem;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+    color: rgba($light-color, 0.8);
+  }
+
+  .author {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+
+    &__image {
+      width: 6rem;
+      height: 6rem;
+      object-fit: cover;
+      object-position: center;
+      border: 0.4rem solid $light-color;
+      border-radius: 0.5rem;
+    }
+
+    &__title {
+      margin: 0 0 0.5rem 0;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 28px;
+      color: $light-color;
+    }
+
+    &__position {
+      margin: 0;
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 1.9rem;
+      letter-spacing: 0.25em;
+      color: $primary-color;
+      text-transform: uppercase;
+    }
+  }
+}

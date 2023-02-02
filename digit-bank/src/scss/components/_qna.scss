@@ -1,3 +1,6 @@
+$column-gap: 6rem;
+$block-basis: calc(50% - ($column-gap/2));
+
 .qna {
   padding-bottom: 10rem;
   background: radial-gradient(
@@ -15,12 +18,14 @@
 
   &__container {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6rem;
+    display: flex;
+    align-items: flex-start;
+    gap: $column-gap;
   }
 
   &__left {
+    position: relative;
+    flex: 1 0 $block-basis;
     display: flex;
     justify-content: center;
   }
@@ -30,6 +35,21 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &__right {
+    flex: 1 0 $block-basis;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
   }
 }
 
