@@ -1,0 +1,117 @@
+.footer {
+  padding-top: 10rem;
+  background-color: $heading-color;
+
+  &__top {
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 40rem;
+  }
+
+  &__text {
+    padding-right: 4rem;
+    color: rgba($light-color, 0.8);
+  }
+
+  &__logo-img {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+    border-top: 1px dashed rgba($light-color, 0.25);
+  }
+
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+
+  &__bottom-left {
+    color: rgba($light-color, 0.8);
+  }
+
+  &__bottom-right {
+    color: $light-color;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex: 1 0 auto;
+  }
+}
+
+.footer-column {
+  &__title {
+    margin: 0 0 2.15rem 0;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    color: $light-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-weight: 400;
+
+    &--plain {
+      .footer-column__item::before {
+        content: "\25B6";
+        margin-right: 1rem;
+        color: $primary-color;
+      }
+    }
+
+    &--social {
+      .footer-column {
+        &__link {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        &__icon-wrapper {
+          display: flex;
+          width: 2rem;
+          height: 2rem;
+          color: $primary-color;
+        }
+
+        &__icon {
+          height: 100%;
+          width: auto;
+          fill: currentColor;
+        }
+      }
+    }
+  }
+
+  &__item {
+    color: rgba($light-color, 0.5);
+    transition: color 0.15s ease-out;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+}

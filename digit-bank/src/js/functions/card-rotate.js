@@ -6,6 +6,5 @@ import VanillaTilt from "vanilla-tilt";
   VanillaTilt.init(card, {
     max: 25,
     speed: 10,
-    scale: 1.1,
   });
 })();

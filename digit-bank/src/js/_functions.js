@@ -21,7 +21,7 @@
 // import './functions/fix-fullheight';
 
 // Burdger menu
-// import { burger } from './functions/burger';
+import { burger } from "./functions/burger";
 
 // Disable scrolling (do not forget to call the function)
 // import { disableScroll } from './functions/disable-scroll';

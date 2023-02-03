@@ -14,6 +14,7 @@
     );
 
   &__container {
+    display: flex;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -137,6 +138,41 @@
       &__subtitle {
         color: $light-color;
       }
+    }
+  }
+}
+
+@include big-desktop {
+  .reasons {
+    &__container {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+}
+
+@include tablet {
+  .reasons {
+    padding-bottom: 5rem;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@include mobile {
+  .reasons {
+    &__right {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      column-gap: 3rem;
     }
   }
 }

@@ -15,9 +15,14 @@
     const minutes = Math.floor((distance % hour) / minute);
     const seconds = Math.floor((distance % minute) / second);
 
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+
+    if (daysEl.innerText != days) daysEl.innerText = days;
+    if (hoursEl.innerText != hours) hoursEl.innerText = hours;
+    if (minutesEl.innerText != minutes) minutesEl.innerText = minutes;
+    if (secondsEl.innerText != seconds) secondsEl.innerText = seconds;
   }, 1000);
 })();

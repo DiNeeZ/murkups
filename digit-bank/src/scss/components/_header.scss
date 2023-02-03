@@ -3,6 +3,10 @@
   width: 100%;
   top: 0;
   z-index: 50;
+
+  &__container {
+    position: relative;
+  }
 }
 
 .topbar {
@@ -68,6 +72,7 @@
   }
 
   &__logo {
+    flex-shrink: 0;
     width: 19.236rem;
     height: 4.834rem;
   }
@@ -77,24 +82,112 @@
     align-items: center;
     gap: 3rem;
   }
+}
 
-  &__link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.burger {
+  @include burger;
+  flex-shrink: 0;
+  display: none;
+}
 
-    svg {
-      width: 1.2rem;
-      height: 1.5rem;
-      fill: currentColor;
-      transition: transform 0.3s linear;
-      transform-origin: center center;
+@include tablet {
+  .navbar {
+    &__btn {
+      display: none;
     }
 
-    &:hover {
-      svg {
-        transform: rotate(-180deg);
+    &__list {
+      gap: 1rem;
+    }
+  }
+}
+
+@include small-tablet {
+  .header {
+    &__container {
+      padding: 0;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .topbar {
+    margin-bottom: 0;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+
+    &__left {
+      gap: 1.5rem;
+    }
+
+    &__links {
+      gap: 1.5rem;
+    }
+
+    &__link {
+      &:first-child {
+        &::after {
+          display: none;
+        }
       }
+    }
+  }
+
+  .navbar {
+    &__inner {
+      padding: 2rem;
+    }
+    &__list {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      visibility: hidden;
+      opacity: 0;
+      right: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      font-size: 2rem;
+      background: rgba($light-color, 0.95);
+      backdrop-filter: blur(4rem);
+      transition: all 0.3s ease-in-out;
+
+      &.menu--active {
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+      }
+    }
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+@include mobile {
+  .topbar {
+    margin-top: 1rem;
+
+    &__left {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    &__left-item {
+      margin: 0;
+    }
+
+    &__links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
   }
 }

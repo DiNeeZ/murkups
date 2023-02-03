@@ -2,6 +2,20 @@
   padding-top: 10rem;
   padding-bottom: 10rem;
 
+  background: radial-gradient(
+      50% 100% at top right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    $white-smoke;
+
   &__container {
     text-align: center;
   }
@@ -22,9 +36,18 @@
 
   &__input {
     width: 43.4rem;
-    border: none;
+    padding: 1.5rem 1.3rem;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.1rem;
+    border: none;
+
+    &::placeholder {
+      text-transform: capitalize;
+    }
+  }
+
+  &__btn {
+    padding: 1.6rem 3.5rem;
   }
 }

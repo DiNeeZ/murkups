@@ -102,6 +102,13 @@ a {
   }
 }
 
+@include mobile {
+  .btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.75rem;
+  }
+}
+
 .btn-reset {
   border: none;
   padding: 0;

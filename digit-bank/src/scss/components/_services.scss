@@ -232,3 +232,49 @@
     }
   }
 }
+
+@include tablet {
+  .services {
+    &__list {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    &__item {
+      min-width: 30rem;
+      flex: 1 0 calc(100% / 3 - 2 * 2rem);
+
+      &--video {
+        min-height: 30rem;
+      }
+    }
+  }
+}
+
+@include small-tablet {
+  .services {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@include mobile {
+  .services {
+    &__list {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &__item {
+      flex: 1 0 calc(100% / 3 - 2 * 1rem);
+
+      &--video {
+        min-height: 30rem;
+      }
+    }
+
+    &__more {
+      font-size: 1.5rem;
+    }
+  }
+}

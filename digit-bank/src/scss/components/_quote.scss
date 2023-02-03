@@ -131,3 +131,24 @@
     text-transform: uppercase;
   }
 }
+
+@include small-tablet {
+  .quote {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    &__right {
+      gap: 1rem;
+    }
+
+    &__blockquote {
+      font-size: 2.5rem;
+      line-height: 3.6rem;
+      text-align: center;
+    }
+  }
+}

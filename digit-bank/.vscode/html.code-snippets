@@ -100,7 +100,7 @@
     "description": "Snippet for simple html svg images"
   },
   "tooltip": {
-  "prefix": "tooltip",
+    "prefix": "tooltip",
     "body": [
       "<span class=\"tooltip\">",
       "  <button class=\"tooltip__btn\" aria-describedby=\"$1\">$2</button>",

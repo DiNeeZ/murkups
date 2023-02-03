@@ -32,3 +32,27 @@
     display: flex;
   }
 }
+
+@include tablet {
+  .partners {
+    margin-bottom: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    &__content {
+      padding: 2rem 1rem;
+      transform: translateY(0);
+    }
+    &__title {
+      margin: 0 0 1rem 0;
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 2.8rem;
+      color: $heading-color;
+      text-align: center;
+    }
+    &__list {
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+}
