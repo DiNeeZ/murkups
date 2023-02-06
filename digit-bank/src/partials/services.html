@@ -53,11 +53,11 @@
             alt="video"
           />
         </picture>
-        <button class="services__item-btn btn-reset">
+        <a data-modal="modal-one" class="services__item-btn">
           <svg>
             <use xlink:href="img/sprite.svg#play"></use>
           </svg>
-        </button>
+        </a>
       </li>
     </ul>
     <div class="services__more">
@@ -68,6 +68,24 @@
           <use xlink:href="img/sprite.svg#arrow-right"></use>
         </svg>
       </a>
+    </div>
+  </div>
+  <div class="modal" id="modal-one">
+    <div class="modal-bg modal-exit"></div>
+    <div class="modal-container video-block">
+      <video
+        class="modal__content video"
+        src="./videos/smartphone.mp4"
+        muted
+        loop
+        preload="metadata"
+      ></video>
+      <button class="video-block__play btn-reset">
+        <svg>
+          <use xlink:href="img/sprite.svg#play"></use>
+        </svg>
+      </button>
+      <button class="modal-close modal-exit">&#10006;</button>
     </div>
   </div>
 </section>

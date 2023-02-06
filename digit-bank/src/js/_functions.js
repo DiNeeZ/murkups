@@ -64,9 +64,9 @@ const startSwiper = new Swiper(".start-slider", {
 });
 
 const testimonialsSwiper = new Swiper(".testimonials__slider", {
-  slidesPerView: 2,
-  slidesPerGroup: 2,
-  spaceBetween: 20,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  spaceBetween: 0,
   speed: 500,
   autoplay: {
     delay: 5000,
@@ -76,6 +76,13 @@ const testimonialsSwiper = new Swiper(".testimonials__slider", {
     el: ".testimonials__slider-pagination",
     type: "bullets",
     clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 20,
+    },
   },
 });
 

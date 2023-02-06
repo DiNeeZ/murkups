@@ -80,3 +80,31 @@ $block-basis: calc(50% - ($column-gap/2));
     color: inherit;
   }
 }
+
+@include tablet {
+  .qna-badge {
+    padding: 3rem;
+  }
+}
+
+@include small-tablet {
+  .qna {
+    padding-bottom: 5rem;
+    &__container {
+      flex-direction: column;
+    }
+
+    &__left {
+      display: none;
+    }
+  }
+}
+
+@include mobile {
+  .qna {
+    &__heading {
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

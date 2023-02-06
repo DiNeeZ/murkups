@@ -54,3 +54,10 @@
     justify-content: center;
   }
 }
+
+@include small-tablet {
+  .testimonials {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}

@@ -129,5 +129,24 @@
       "</div>"
     ],
     "description": "Snippet for basic tabs structure"
+  },
+  "modal trigger": {
+    "prefix": "modal-btn",
+    "body": ["<a data-modal=\"modal-one\">", "</a>"],
+    "description": "Snippet for a button that triggers a modal"
+  },
+  "modal": {
+    "prefix": "modal",
+    "body": [
+      "<div class=\"modal\"  id=\"modal-one\">",
+      "  <div class=\"modal-bg modal-exit\"></div>",
+      "  <div class=\"modal-container\" >",
+      "    <h1>This is my</h1>",
+      "    <h2>Modal window</h2>",
+      "    <button class=\"modal-close modal-exit\">&#10006;</button>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Snippet for a modal window"
   }
 }
