@@ -1,0 +1,53 @@
+.hero-minor {
+  background: radial-gradient(
+      50% 100% at top right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    );
+  &__container {
+    background-image: url("../img/hero-minor-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: right;
+  }
+
+  &__content {
+    padding-top: 27rem;
+    padding-bottom: 10rem;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 64rem;
+  }
+}
+
+@include mobile {
+  .hero-minor {
+    &__container {
+      background: none;
+    }
+
+    &__content {
+      padding-top: 18rem;
+    }
+
+    &__heading {
+      gap: 4rem;
+      text-align: center;
+    }
+  }
+}

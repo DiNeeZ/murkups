@@ -9,9 +9,16 @@
 @import "./components/testimonial";
 @import "./components/apps-btns";
 @import "./components/video-block";
+@import "./components/breadcrumbs";
+@import "./components/card";
+@import "./components/markered-list";
+@import "./components/team-member";
 
-// page components
+// common page components
 @import "./components/header";
+@import "./components/footer";
+
+// home page components
 @import "./components/hero";
 @import "./components/partners";
 @import "./components/start";
@@ -24,4 +31,11 @@
 @import "./components/testimonials";
 @import "./components/blog";
 @import "./components/newslater";
-@import "./components/footer";
+
+//about page components
+@import "./components/hero-minor";
+@import "./components/about-block";
+@import "./components/trust-us";
+@import "./components/choose-us";
+@import "./components/team";
+@import "./components/join-us";

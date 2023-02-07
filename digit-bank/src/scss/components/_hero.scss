@@ -24,17 +24,10 @@
 
   &__subtitle {
     margin-bottom: 1rem;
-    font-size: 4.5rem;
-    line-height: 5.8rem;
-
-    span {
-      color: $primary-color;
-    }
   }
 
   &__descr {
-    margin: 0 0 3rem 0;
-    font-weight: 400;
+    margin-bottom: 3rem;
   }
 
   &__btn-group {

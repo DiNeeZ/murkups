@@ -1,0 +1,219 @@
+.about-block {
+  padding-top: 10rem;
+
+  background: radial-gradient(
+      50% 100% at top left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    $white-smoke;
+
+  &__top {
+    padding-bottom: 10rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+  }
+
+  &__left {
+    position: relative;
+    padding-bottom: 5.2rem;
+  }
+
+  &__image {
+    display: flex;
+    border: 1.2rem solid #ffffff;
+    border-radius: 0.5rem;
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 2.6rem;
+    background: rgba($light-color, 0.27);
+    border: 1px solid rgba($light-color, 0.27);
+    box-shadow: 0px 1rem 2.5rem rgba($dark-color, 0.05);
+    backdrop-filter: blur(1rem);
+    border-radius: 0.5rem;
+  }
+
+  &__subimage {
+    display: flex;
+    border: 1.2rem solid #ffffff;
+    border-radius: 0.5rem;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 50%;
+    right: 7.2rem;
+    transform: translateY(-50%);
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-image: url("../img/about-block-bg.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+  }
+
+  &__heading {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  &__icon {
+    &--award {
+      width: 3.4rem;
+    }
+
+    &--calendar {
+      width: 4rem;
+    }
+  }
+
+  &__bottom {
+    background: linear-gradient(
+      170deg,
+      rgba($primary-color, 0.93) 0%,
+      rgba($secondary-color, 0.75) 100%
+    );
+    box-shadow: 0 1rem 2.5rem rgba($dark-color, 0.05);
+    backdrop-filter: blur(1rem);
+    border-radius: 0.5rem;
+  }
+}
+
+.about-block-badge {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  color: $light-color;
+  background: rgba($primary-color, 0.44);
+  box-shadow: 0px 1rem 2.5rem rgba($dark-color, 0.05);
+  backdrop-filter: blur(1rem);
+  border-radius: 5px;
+
+  &__icon {
+    width: 4.5rem;
+    height: 4.5rem;
+    fill: currentColor;
+  }
+
+  &__title {
+    margin: 0 0 0.7rem 0;
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.1rem;
+  }
+}
+
+.about-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 5rem;
+  color: $light-color;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 600;
+  }
+
+  &__num {
+    position: relative;
+    font-size: 3.5rem;
+    line-height: 5.2rem;
+
+    &::after {
+      content: "+";
+      position: absolute;
+      top: 0;
+      right: -2rem;
+      font-size: 2rem;
+      line-height: 2.6rem;
+      opacity: 0.8;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 2.6rem;
+    opacity: 0.8;
+  }
+}
+
+@include tablet {
+  .about-block {
+    &__top {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2rem;
+    }
+  }
+}
+
+@include small-tablet {
+  .about-block {
+    padding-top: 5rem;
+    &__top {
+      padding-bottom: 5rem;
+    }
+  }
+}
+
+@include mobile {
+  .about-block {
+    &__heading {
+      text-align: center;
+    }
+
+    &__cards {
+      grid-template-columns: 1fr;
+    }
+
+    &__list {
+      padding: 2rem;
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+    }
+  }
+
+  .about-block-badge {
+    width: 100%;
+    right: 0;
+  }
+}

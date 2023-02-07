@@ -133,6 +133,18 @@ a {
   color: $heading-color;
 }
 
+.page-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 4.5rem;
+  line-height: 5.8rem;
+  color: $heading-color;
+
+  span {
+    color: $primary-color;
+  }
+}
+
 .list-reset {
   list-style: none;
   margin: 0;

@@ -1,0 +1,36 @@
+.team {
+  padding-bottom: 10rem;
+  background: radial-gradient(
+      50% 100% at top right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    );
+
+  &__container {
+    background-image: url("../img/team-bg.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+
+  &__heading {
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}

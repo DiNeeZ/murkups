@@ -1,0 +1,26 @@
+.join-us {
+  padding: 10rem 0;
+  background: radial-gradient(
+      100.01% 100.1% at 100% 100.1%,
+      rgba($primary-color, 0.75) 0%,
+      rgba($heading-color, 0.75) 50%
+    ),
+    url("../img/join-us-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 65.4rem;
+    font-weight: 600;
+    font-size: 4.5rem;
+    line-height: 5.8rem;
+    color: $light-color;
+  }
+}
