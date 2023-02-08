@@ -13,6 +13,8 @@
 @import "./components/card";
 @import "./components/markered-list";
 @import "./components/team-member";
+@import "./components/feature";
+@import "./components/badge";
 
 // common page components
 @import "./components/header";
@@ -39,3 +41,11 @@
 @import "./components/choose-us";
 @import "./components/team";
 @import "./components/join-us";
+
+//download apps components
+@import "./components/download-timer";
+@import "./components/app-features";
+
+//services page components
+@import "./components/hero-services";
+@import "./components/facilities";

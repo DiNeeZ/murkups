@@ -1,0 +1,101 @@
+.app-features {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background: radial-gradient(
+      50% 100% at top left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    );
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6rem;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__quote {
+    position: relative;
+    margin: 0;
+    padding-left: 2.5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 0.7rem;
+      height: 100%;
+      background-color: $primary-color;
+    }
+  }
+
+  &__quote-text {
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+    font-weight: 500;
+    color: $heading-color;
+  }
+
+  &__quote-caption {
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+}
+
+@include tablet {
+  .app-features {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &__container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    &__list {
+      flex: 1 0 auto;
+    }
+
+    &__image {
+      display: none;
+    }
+  }
+}
+
+@include small-tablet {
+  .app-features {
+    &__container {
+      flex-direction: column;
+    }
+  }
+}

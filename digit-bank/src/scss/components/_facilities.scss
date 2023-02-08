@@ -1,0 +1,16 @@
+.facilities {
+  padding: 10rem 0;
+  background: radial-gradient(
+      50% 100% at top left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    $white-smoke;
+}

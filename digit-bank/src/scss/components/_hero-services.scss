@@ -1,0 +1,102 @@
+.hero-services {
+  background: radial-gradient(
+      50% 100% at top right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    url("../img/hero-services-bg.png");
+
+  background-repeat: no-repeat;
+  background-position: center 12%;
+
+  &__container {
+    padding-top: 20rem;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+    align-items: center;
+  }
+
+  &__breadcrumbs {
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 64rem;
+  }
+
+  &__image-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: url("../img/quote-left-bg.png");
+      position: absolute;
+      top: 0;
+    }
+  }
+
+  &__image {
+    height: 100%;
+    border-radius: 80rem;
+  }
+
+  &__chart {
+    position: absolute;
+    top: 4rem;
+    left: 2rem;
+    width: 7rem;
+    height: 7rem;
+    padding: 1.75rem;
+    fill: $light-color;
+    background-color: $primary-color;
+    border-radius: 50%;
+  }
+
+  &__shield {
+    position: absolute;
+    top: 1.8rem;
+    right: 11.8rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    fill: $light-color;
+    background-color: $secondary-color;
+    border-radius: 50%;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@include mobile {
+  .hero-services {
+    &__container {
+      background: none;
+    }
+
+    &__content {
+      padding-top: 18rem;
+    }
+
+    &__heading {
+      gap: 4rem;
+      text-align: center;
+    }
+  }
+}
