@@ -82,6 +82,12 @@
     align-items: center;
     gap: 3rem;
   }
+
+  &__link:is(:visited, :active, :link).active {
+    color: $primary-color;
+    cursor: auto;
+    opacity: 0.8;
+  }
 }
 
 .burger {

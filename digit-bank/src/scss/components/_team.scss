@@ -34,3 +34,26 @@
     gap: 3rem;
   }
 }
+
+@include tablet {
+  .team {
+    padding-bottom: 5rem;
+
+    &__list {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    &__list-item {
+      max-width: 70rem;
+    }
+  }
+}
+
+@include small-tablet {
+  .team {
+    &__list-item {
+      max-width: 100%;
+    }
+  }
+}

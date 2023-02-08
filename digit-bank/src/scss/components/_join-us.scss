@@ -18,9 +18,33 @@
 
   &__title {
     max-width: 65.4rem;
+    margin: 0;
     font-weight: 600;
     font-size: 4.5rem;
     line-height: 5.8rem;
     color: $light-color;
+  }
+}
+
+@include tablet {
+  .join-us {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__title {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@include mobile {
+  .join-us {
+    padding: 5rem 0;
+    &__title {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
   }
 }

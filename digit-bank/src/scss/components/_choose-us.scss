@@ -66,3 +66,53 @@
     }
   }
 }
+
+@include big-desktop {
+  .choose-us {
+    &__container {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__left {
+      grid-column: 2 span;
+    }
+
+    &__right {
+      grid-column: 4 span;
+    }
+  }
+}
+
+@include tablet {
+  .choose-us {
+    &__container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    &__left {
+      align-items: center;
+      grid-column: unset;
+    }
+
+    &__heading {
+      text-align: center;
+      max-width: 60rem;
+    }
+  }
+}
+
+@include small-tablet {
+  .choose-us {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@include mobile {
+  .choose-us {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

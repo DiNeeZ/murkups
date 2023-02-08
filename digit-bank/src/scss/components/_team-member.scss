@@ -77,3 +77,30 @@
     fill: currentColor;
   }
 }
+
+@include mobile {
+  .team-member {
+    &__image-wrapper {
+      width: 100%;
+    }
+    &__info {
+      padding: 1.5rem;
+      gap: 1rem;
+    }
+
+    &__descr {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    &__socials {
+      gap: 1rem;
+    }
+
+    &__social-link {
+      padding: 0.5rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+}
