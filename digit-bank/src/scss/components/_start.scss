@@ -1,5 +1,4 @@
 .start {
-  margin-top: -7.5rem;
   padding-top: 18.5rem;
   padding-bottom: 10rem;
 
@@ -38,6 +37,23 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+  }
+
+  &.secondary {
+    padding-top: 10rem;
+
+    background: radial-gradient(
+        50% 100% at top right,
+        rgba($primary-color, 0.3),
+        rgba($light-color, 0.5),
+        rgba($light-color, 0)
+      ),
+      radial-gradient(
+        50% 100% at bottom left,
+        rgba($primary-color, 0.3),
+        rgba($light-color, 0.5),
+        rgba($light-color, 0)
+      );
   }
 }
 
@@ -245,6 +261,10 @@
 }
 
 @include tablet {
+  .start {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
   .start__top {
     grid-template-columns: 1fr;
   }
@@ -270,11 +290,6 @@
 }
 
 @include small-tablet {
-  .start {
-    margin-top: 0;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
   .start-people {
     display: none;
   }

@@ -1,0 +1,111 @@
+.card-ext {
+  position: relative;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  text-align: left;
+  background: rgba($light-color, 0.25);
+  box-shadow: 0px 1rem 2.5rem rgba($dark-color, 0.05);
+  backdrop-filter: blur(1rem);
+  border-radius: 0.5rem;
+
+  &__icon {
+    fill: $primary-color;
+    &--rect {
+      width: 5.1rem;
+      height: 4.5rem;
+    }
+
+    &--sq {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+
+  &__title {
+    margin: 0 0 1rem 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 3.8rem;
+    color: $heading-color;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__btn {
+    z-index: 1;
+    transition: background 0.3s ease-in-out;
+    &::before {
+      z-index: -1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__decor-icon {
+    position: absolute;
+    bottom: 1.4rem;
+    right: 0.65rem;
+    width: 12rem;
+    height: 12rem;
+    padding: 2rem;
+    fill: rgba($secondary-color, 0.25);
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      170deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+
+    .card-ext {
+      &__icon {
+        fill: $light-color;
+      }
+
+      &__title {
+        color: $light-color;
+      }
+
+      &__subtitle {
+        color: $light-color;
+      }
+
+      &__btn {
+        color: $primary-color;
+        background: $light-color;
+
+        &::before {
+          opacity: 0;
+        }
+      }
+
+      &__decor-icon {
+        fill: $light-color;
+      }
+    }
+  }
+}

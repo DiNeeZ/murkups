@@ -20,9 +20,17 @@
     padding-top: 20rem;
     padding-bottom: 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 6rem;
     align-items: center;
+  }
+
+  &__content {
+    grid-column: span 3;
+  }
+
+  &__image-block {
+    grid-column: span 3;
   }
 
   &__breadcrumbs {
@@ -84,6 +92,61 @@
   }
 }
 
+@include tablet {
+  .hero-services {
+    &__content {
+      grid-column: span 4;
+    }
+
+    &__image-block {
+      grid-column: span 2;
+    }
+
+    &__badge {
+      padding: 0.5rem 1rem;
+      flex-direction: column;
+      gap: 0;
+      top: 60%;
+      transform: translateX(0);
+
+      .badge {
+        &__icon {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        &__text {
+          text-align: center;
+        }
+
+        &__title {
+          font-size: 1.75rem;
+        }
+
+        &__subtitle {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@include small-tablet {
+  .hero-services {
+    &__container {
+      display: block;
+    }
+
+    &__heading {
+      text-align: center;
+    }
+
+    &__image-block {
+      display: none;
+    }
+  }
+}
+
 @include mobile {
   .hero-services {
     &__container {
@@ -91,7 +154,7 @@
     }
 
     &__content {
-      padding-top: 18rem;
+      padding-bottom: 5rem;
     }
 
     &__heading {

@@ -13,4 +13,65 @@
       rgba($light-color, 0)
     ),
     $white-smoke;
+
+  &__container {
+    position: relative;
+    text-align: center;
+    background-image: url("../img/services-bg.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &::before {
+      content: url("../img/credit-card.png");
+      position: absolute;
+      top: 11rem;
+      left: 0;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 3.5rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 0 10rem;
+  }
+}
+
+@include tablet {
+  .facilities {
+    &__list {
+      gap: 2rem;
+      margin: 0;
+    }
+  }
+}
+
+@include small-tablet {
+  .facilities {
+    &__list {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    &__item {
+      max-width: 50rem;
+    }
+  }
+}
+
+@include mobile {
+  .facilities {
+    &__item {
+      padding: 2.5rem;
+      max-width: 100%;
+    }
+  }
 }
