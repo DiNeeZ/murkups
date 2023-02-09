@@ -1,0 +1,129 @@
+<section class="form-block">
+  <div class="container form-block__container">
+    <div class="form-block__content">
+      <div class="form-block__info">
+        <div class="form-block__heading">
+          <h2 class="form-block__title section-title">LEts Get In TOuch</h2>
+          <p class="form-block__subtitle section-subtitle">
+            Lets Connected With Us
+          </p>
+          <p class="form-block__descr text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          </p>
+        </div>
+        <ul class="form-block__list list-reset">
+          <li class="form-block__list-item contact">
+            <svg class="contact__icon">
+              <use xlink:href="img/sprite.svg#map-pin"></use>
+            </svg>
+            <div class="contact__text">
+              <h4 class="contact__title">Head Quarter</h4>
+              <p class="contact__subtitle">
+                Gresik United East Java Nggepeng Village
+              </p>
+            </div>
+          </li>
+          <li class="form-block__list-item contact">
+            <svg class="contact__icon">
+              <use xlink:href="img/sprite.svg#envelope"></use>
+            </svg>
+            <div class="contact__text">
+              <h4 class="contact__title">Email Address</h4>
+              <a
+                href="mailto:Hello@Email.com"
+                class="contact__subtitle contact__subtitle--link"
+                >Hello@Email.com</a
+              >
+            </div>
+          </li>
+          <li class="form-block__list-item contact">
+            <svg class="contact__icon">
+              <use xlink:href="img/sprite.svg#map-pin"></use>
+            </svg>
+            <div class="contact__text">
+              <h4 class="contact__title">Telephone</h4>
+              <a
+                href="tel:+62123456789"
+                class="contact__subtitle contact__subtitle--link"
+              >
+                ( +62 ) 123 456 789
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="form-block__form form">
+        <div class="form__heading">
+          <h3 class="form__title">Leave a Message</h3>
+          <p class="form__subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+        <form class="form__inner">
+          <fieldset class="form__inputs-control">
+            <label class="form__input-control">
+              First Name
+              <input
+                class="form__input"
+                type="text"
+                placeholder="First Name"
+                name="fname"
+              />
+            </label>
+            <label class="form__input-control">
+              Last Name
+              <input
+                class="form__input"
+                type="text"
+                placeholder="Last Name"
+                name="lname"
+              />
+            </label>
+            <label class="form__input-control">
+              Email Address
+              <input
+                class="form__input"
+                type="email"
+                placeholder="Email"
+                name="fname"
+              />
+            </label>
+            <label class="form__input-control">
+              Subject
+              <input
+                class="form__input"
+                type="text"
+                placeholder="Subject"
+                name="lname"
+              />
+            </label>
+          </fieldset>
+
+          <label class="form__input-control">
+            Message
+            <textarea
+              rows="4"
+              class="form__input form__input--msg"
+              placeholder="Your Message Here..."
+              name="message"
+            ></textarea>
+          </label>
+
+          <button class="form__btn btn btn-reset">Send Message</button>
+        </form>
+      </div>
+    </div>
+    <picture>
+      <source srcset="img/contact-us.avif" type="image/avif" />
+      <source srcset="img/contact-us.webp" type="image/webp" />
+      <img
+        loading="lazy"
+        src="img/contact-us.jpg"
+        class="form-block__image"
+        alt="decoration"
+        aria-hidden="true"
+      />
+    </picture>
+  </div>
+</section>

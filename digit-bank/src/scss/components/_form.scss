@@ -1,0 +1,90 @@
+.form {
+  padding: 5rem;
+  background-color: rgba($light-color, 0.25);
+  box-shadow: 0px 1rem 2.5rem rgba($dark-color, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+
+  &__heading {
+    margin-bottom: 3rem;
+  }
+
+  &__title {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    line-height: 3.8rem;
+    color: $heading-color;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__inputs-control {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  &__input-control {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__input {
+    padding: 1.4rem 1.3rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba($text-color, 0.25);
+    border-radius: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+
+    &:focus {
+      border: 1px solid $text-color;
+    }
+
+    &--msg {
+      resize: none;
+    }
+  }
+
+  &__btn {
+    padding: 1.6rem 0;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@include small-tablet {
+  .form {
+    &__inputs-control {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@include mobile {
+  .form {
+    padding: 2rem;
+
+    &__inputs-control {
+      gap: 2rem;
+    }
+  }
+}
