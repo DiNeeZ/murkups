@@ -60,87 +60,6 @@
   }
 }
 
-.post-preview {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: $white-smoke;
-  border-radius: 0.5rem;
-  overflow: hidden;
-
-  &__image-wrapper {
-    position: relative;
-  }
-
-  &__image {
-    width: 100%;
-    height: 28rem;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 0.5rem;
-  }
-
-  &__badge {
-    position: absolute;
-    top: 1.9rem;
-    left: 2.6rem;
-    padding: 1rem 2rem;
-    font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.7rem;
-    text-transform: uppercase;
-    color: $light-color;
-    background-color: $secondary-color;
-    border-radius: 0.5rem;
-  }
-
-  &__text {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  &__title {
-    margin: 0 0 2rem 0;
-    font-weight: 600;
-    font-size: 2.5rem;
-    line-height: 3.8rem;
-    display: flex;
-    align-items: center;
-    color: $heading-color;
-  }
-
-  &__descr {
-    margin-bottom: 2rem;
-  }
-
-  &__link {
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    color: $primary-color;
-    transition: color 0.15s linear;
-
-    &:hover {
-      color: darken($primary-color, 10%);
-    }
-  }
-
-  &__footer {
-    padding: 1.5rem 0;
-    font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 2rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-
-    color: #adadad;
-    text-align: center;
-    border-top: 1px solid #dadada;
-  }
-}
-
 @include tablet {
   .blog {
     &__header {
@@ -155,12 +74,6 @@
       gap: 1rem;
     }
   }
-
-  .post-preview {
-    &__text {
-      padding: 0 1rem 1rem 1rem;
-    }
-  }
 }
 
 @include small-tablet {
@@ -171,28 +84,12 @@
       grid-template-columns: 1fr;
     }
   }
-
-  .post-preview {
-    width: 50rem;
-    justify-self: center;
-    &__text {
-      padding: 3rem;
-    }
-  }
 }
 
 @include mobile {
   .blog {
     &__header {
       grid-template-columns: 1fr;
-    }
-  }
-
-  .post-preview {
-    width: 100%;
-
-    &__text {
-      padding: 0.5rem 1.5rem 1.5rem 1.5rem;
     }
   }
 }

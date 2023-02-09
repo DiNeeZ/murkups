@@ -16,6 +16,7 @@
 @import "./components/team-member";
 @import "./components/feature";
 @import "./components/badge";
+@import "./components/post-preview";
 
 // common page components
 @import "./components/header";
@@ -50,3 +51,7 @@
 //services page components
 @import "./components/hero-services";
 @import "./components/facilities";
+
+//blog page components
+@import "./components/hero-blog";
+@import "./components/blog-list";

@@ -1,0 +1,38 @@
+.blog-list {
+  padding: 10rem 0;
+  background: radial-gradient(
+      50% 100% at top left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    );
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+@include tablet {
+  .blog-list {
+    padding: 5rem 0;
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@include small-tablet {
+  .blog-list {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
