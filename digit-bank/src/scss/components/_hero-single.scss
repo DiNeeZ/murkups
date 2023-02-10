@@ -1,0 +1,14 @@
+.hero-single {
+  padding: 26.7rem 0 10rem 0;
+  background-image: url("../img/hero-single-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+}
