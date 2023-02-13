@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="theme-color" content="#111111" />
+    <title>Banking - Page not Found</title>
+    <link rel="stylesheet" href="css/vendor.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+
+  <body class="page__body">
+    <div class="site-container">
+      @include('partials/header.html')
+      <main class="main">
+        <section class="page-not-found">
+          <div class="container page-not-found__container">
+            <div class="page-not-found__content">
+              <picture>
+                <source srcset="img/404-img.avif" type="image/avif" />
+                <source srcset="img/404-img.webp" type="image/webp" />
+                <img
+                  loading="lazy"
+                  src="img/404-img.jpg"
+                  class="page-not-found__image"
+                  alt="page not found"
+                />
+              </picture>
+              <p class="page-not-found__msg">
+                Oppss... Something Went Wrong...
+              </p>
+              <h1 class="page-title">Page <span>Not Found</span></h1>
+              <a href="/index.html" class="btn">Back To Homepage</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      @include('partials/footer.html')
+    </div>
+  </body>
+</html>

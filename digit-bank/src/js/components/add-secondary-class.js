@@ -7,8 +7,6 @@
 
     startSection.classList.add("secondary");
 
-    // console.log(qnaImgSet);
-
     [...qnaImgSet].forEach((element) => {
       if (element.tagName === "IMG") {
         element.src = "./img/qna-2.jpg";

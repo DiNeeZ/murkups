@@ -1,8 +1,19 @@
 .hero-single {
   padding: 26.7rem 0 10rem 0;
-  background-image: url("../img/hero-single-bg.png");
-  background-position: center;
-  background-repeat: no-repeat;
+
+  background: radial-gradient(
+      50% 100% at top right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    url("../img/hero-single-bg.png") no-repeat center, $white-smoke;
 
   &__container {
     display: flex;

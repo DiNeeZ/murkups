@@ -22,7 +22,10 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 6rem;
-    align-items: center;
+
+    & > * {
+      align-items: center;
+    }
   }
 
   &__content {

@@ -18,10 +18,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
-    align-items: center;
     background-image: url("../img/showcase-bg.png");
     background-repeat: no-repeat;
     background-position: 80% 10%;
+
+    & > * {
+      align-self: center;
+    }
   }
 
   &__image-wrapper {

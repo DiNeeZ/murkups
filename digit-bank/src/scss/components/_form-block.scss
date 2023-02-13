@@ -21,12 +21,15 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
     gap: 6rem;
     margin-bottom: 6rem;
     background-image: url("../img/contact-us-form.png");
     background-repeat: no-repeat;
     background-position: right center;
+
+    & > * {
+      align-self: center;
+    }
   }
 
   &__info {

@@ -18,7 +18,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 6rem;
-    align-items: center;
+
+    & > * {
+      align-self: center;
+    }
   }
 
   &__info {

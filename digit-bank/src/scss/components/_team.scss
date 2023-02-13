@@ -41,7 +41,10 @@
 
     &__list {
       grid-template-columns: 1fr;
-      justify-items: center;
+
+      & > * {
+        justify-self: center;
+      }
     }
 
     &__list-item {

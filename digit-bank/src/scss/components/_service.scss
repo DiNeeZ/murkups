@@ -1,0 +1,165 @@
+.service {
+  padding: 10rem 0;
+  background: radial-gradient(
+      50% 100% at top left,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    ),
+    radial-gradient(
+      50% 100% at bottom right,
+      rgba($primary-color, 0.3),
+      rgba($light-color, 0.5),
+      rgba($light-color, 0)
+    );
+
+  &__descr {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  &__info {
+    max-width: 80rem;
+  }
+
+  &__list {
+    flex: 1 0 auto;
+    padding: 3.5rem;
+  }
+
+  &__title {
+    margin: 0 0 1.5rem 0;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+
+  &__subtitle {
+    margin: 0 0 1.5rem 0;
+
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    color: $heading-color;
+  }
+
+  &__text:first-child {
+    margin-bottom: 1rem;
+  }
+}
+
+.service-top {
+  margin-bottom: 3rem;
+
+  &__video-block {
+    position: relative;
+    margin-bottom: 5rem;
+    padding-top: calc((50rem / 134rem) * 100%);
+    height: 0;
+    background: white;
+    overflow: hidden;
+  }
+
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__play-btn {
+    width: 15rem;
+    height: 15rem;
+    background-color: transparent;
+    border: 0.5rem solid $light-color;
+
+    svg {
+      width: 4.5rem;
+      height: 6rem;
+      fill: rgba($light-color, 0.8);
+    }
+  }
+}
+
+.service-bottom {
+  &__benefit:first-child {
+    margin-bottom: 3.5rem;
+  }
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+
+  & > * {
+    flex-basis: 50%;
+  }
+
+  &__image {
+    border-radius: 0.5rem;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@include tablet {
+  .service {
+    padding: 5rem 0;
+
+    &__descr {
+      align-items: flex-start;
+      gap: 3rem;
+    }
+
+    &__list {
+      padding: 0;
+    }
+  }
+
+  .benefit {
+    gap: 3rem;
+    flex-direction: column;
+    &--reverse {
+      flex-direction: column;
+    }
+  }
+}
+
+@include small-tablet {
+  .service {
+    &__descr {
+      flex-direction: column;
+    }
+  }
+
+  .service-top {
+    &__video-block {
+      margin-bottom: 2rem;
+      padding-top: 56.25%;
+    }
+
+    &__play-btn {
+      width: 7.5rem;
+      height: 7.5rem;
+
+      svg {
+        width: 2.5rem;
+        height: 3rem;
+      }
+    }
+  }
+}

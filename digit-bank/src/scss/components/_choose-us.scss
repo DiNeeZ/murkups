@@ -19,7 +19,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
-    align-items: center;
+
+    & > * {
+      align-self: center;
+    }
   }
 
   &__left {
